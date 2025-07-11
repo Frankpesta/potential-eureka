@@ -1,11 +1,18 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { animate, stagger } from "animejs";
 
-export function InsightsCategories() {
-	const [activeCategory, setActiveCategory] = useState("all");
+interface InsightsCategoriesProps {
+	activeCategory: string;
+	onCategoryChange: (categoryId: string) => void;
+}
+
+export function InsightsCategories({
+	activeCategory,
+	onCategoryChange,
+}: InsightsCategoriesProps) {
 	const categoriesRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
@@ -41,6 +48,12 @@ export function InsightsCategories() {
 		{ id: "retirement", name: "Retirement" },
 	];
 
+	// Debug: Log category change
+	const handleCategoryChange = (categoryId: string) => {
+		console.log("Category changed to:", categoryId);
+		onCategoryChange(categoryId);
+	};
+
 	return (
 		<div ref={categoriesRef} className="mb-12">
 			<div className="flex flex-wrap gap-3">
@@ -50,7 +63,7 @@ export function InsightsCategories() {
 						variant={activeCategory === category.id ? "default" : "outline"}
 						size="sm"
 						className="category-button opacity-0"
-						onClick={() => setActiveCategory(category.id)}>
+						onClick={() => handleCategoryChange(category.id)}>
 						{category.name}
 					</Button>
 				))}

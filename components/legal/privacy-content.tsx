@@ -36,12 +36,12 @@ export function PrivacyContent() {
 				<CardContent className="p-6 md:p-8 prose dark:prose-invert max-w-none">
 					<h2>1. Introduction</h2>
 					<p>
-						Merilledge Advisory Management, Inc. ("Base Investment Group
-						Limited," "we," "us," or "our") is committed to protecting your
-						privacy. This Privacy Policy explains how we collect, use, disclose,
-						and safeguard your information when you use our website, mobile
-						applications, and investment services (collectively, the
-						"Services").
+						Merilledge Advisory Management, Inc. ("Merilledge Advisory
+						Management Limited," "we," "us," or "our") is committed to
+						protecting your privacy. This Privacy Policy explains how we
+						collect, use, disclose, and safeguard your information when you use
+						our website, mobile applications, and investment services
+						(collectively, the "Services").
 					</p>
 					<p>
 						Please read this Privacy Policy carefully. By accessing or using our

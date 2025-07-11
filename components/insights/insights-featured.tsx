@@ -44,7 +44,7 @@ export function InsightsFeatured() {
 				<div className="grid md:grid-cols-2 gap-0">
 					<div className="relative h-64 md:h-auto">
 						<Image
-							src="/placeholder.svg?height=600&width=800"
+							src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
 							alt="Market trends"
 							fill
 							className="object-cover"
@@ -72,7 +72,7 @@ export function InsightsFeatured() {
 						<div className="flex items-center">
 							<div className="h-10 w-10 rounded-full bg-muted overflow-hidden mr-3">
 								<Image
-									src="/placeholder.svg?height=40&width=40"
+									src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=40&q=80"
 									alt="Author"
 									width={40}
 									height={40}

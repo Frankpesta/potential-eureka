@@ -96,9 +96,10 @@ export function TermsContent() {
 					<p>
 						Before making any investment, you should carefully consider your
 						investment objectives, level of experience, and risk appetite. If
-						necessary, seek independent financial advice. Base Investment Group
-						Limited does not provide personalized investment advice unless
-						explicitly stated and agreed upon in a separate written agreement.
+						necessary, seek independent financial advice. Merilledge Advisory
+						Management Limited does not provide personalized investment advice
+						unless explicitly stated and agreed upon in a separate written
+						agreement.
 					</p>
 
 					<h2>6. Fees and Payments</h2>
@@ -163,19 +164,20 @@ export function TermsContent() {
 						that are not owned or controlled by Merilledge Advisory Management.
 						We have no control over and assume no responsibility for the
 						content, privacy policies, or practices of any third-party websites
-						or services. You acknowledge and agree that Base Investment Group
-						Limited shall not be responsible or liable for any damage or loss
-						caused by or in connection with the use of any such content, goods,
-						or services available through third-party websites or services.
+						or services. You acknowledge and agree that Merilledge Advisory
+						Management Limited shall not be responsible or liable for any damage
+						or loss caused by or in connection with the use of any such content,
+						goods, or services available through third-party websites or
+						services.
 					</p>
 
 					<h2>10. Limitation of Liability</h2>
 					<p>
-						To the maximum extent permitted by law, Base Investment Group
-						Limited and its directors, employees, partners, agents, suppliers,
-						or affiliates shall not be liable for any indirect, incidental,
-						special, consequential, or punitive damages, including without
-						limitation, loss of profits, data, use, goodwill, or other
+						To the maximum extent permitted by law, Merilledge Advisory
+						Management Limited and its directors, employees, partners, agents,
+						suppliers, or affiliates shall not be liable for any indirect,
+						incidental, special, consequential, or punitive damages, including
+						without limitation, loss of profits, data, use, goodwill, or other
 						intangible losses, resulting from:
 					</p>
 					<ul>

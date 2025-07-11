@@ -34,7 +34,7 @@ export function InsightsCta() {
 	}, []);
 
 	const handleSignup = () => {
-		window.location.href = "https://app.baseinvst.com/register";
+		window.location.href = "https://app.merilledgeadvisorymgtltd.com/register";
 	};
 
 	return (

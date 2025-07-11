@@ -1,52 +1,64 @@
 "use client";
 
-import { motion } from "framer-motion";
-import Image from "next/image";
-
-const logos = [
-	{ name: "Forbes", src: "/logos/forbes.png" },
-	{ name: "Bloomberg", src: "/logos/bloomberg.png" },
-	{ name: "CNBC", src: "/logos/cnbc.png" },
-	{ name: "Wall Street Journal", src: "/logos/wsj.png" },
-	{ name: "Financial Times", src: "/logos/ft.png" },
-	{ name: "Reuters", src: "/logos/reuters.png" },
-	{ name: "The Economist", src: "/logos/theecon.png" },
-	{ name: "BBC", src: "/logos/bbc.png" },
-	{ name: "TechCrunch", src: "/logos/techcrunch.png" },
-	{ name: "The Guardian", src: "/logos/theguardian.png" },
-];
+import { useEffect, useRef } from "react";
+import { animate } from "animejs";
 
 export function FeaturedInSection() {
+	const sectionRef = useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				if (entries[0].isIntersecting) {
+					animate(".featured-item", {
+						opacity: [0, 1],
+						scale: [0.9, 1],
+						delay: 100,
+						easing: "easeOutQuad",
+					});
+					observer.disconnect();
+				}
+			},
+			{ threshold: 0.1 }
+		);
+
+		if (sectionRef.current) {
+			observer.observe(sectionRef.current);
+		}
+
+		return () => observer.disconnect();
+	}, []);
+
+	const logos = [
+		"Forbes",
+		"Bloomberg",
+		"CNBC",
+		"Wall Street Journal",
+		"Financial Times",
+		"Reuters",
+		"MarketWatch",
+		"Yahoo Finance",
+		"Investopedia",
+		"The Motley Fool",
+		"Barron's",
+		"Business Insider",
+	];
+
 	return (
-		<section className="py-12 border-y overflow-hidden">
+		<section ref={sectionRef} className="py-12 border-y">
 			<div className="container px-4">
 				<p className="text-center text-sm text-muted-foreground mb-8">
 					FEATURED IN
 				</p>
-				<motion.div
-					className="flex gap-16 whitespace-nowrap"
-					animate={{ x: [0, -1000] }} // Adjust -1000 to match your marquee's width
-					transition={{
-						x: {
-							repeat: Infinity,
-							repeatType: "loop",
-							duration: 20,
-							ease: "linear",
-						},
-					}}>
-					{[...logos, ...logos].map((logo, index) => (
-						<div key={index} className="inline-flex items-center">
-							<Image
-								src={logo.src}
-								alt={logo.name}
-								width={1000}
-								height={1000}
-								className="h-12 object-contain w-full"
-								priority={index < logos.length}
-							/>
+				<div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+					{logos.map((logo, index) => (
+						<div
+							key={index}
+							className="featured-item opacity-0 text-xl font-semibold text-muted-foreground">
+							{logo}
 						</div>
 					))}
-				</motion.div>
+				</div>
 			</div>
 		</section>
 	);
