@@ -134,54 +134,32 @@ export function Navbar() {
 									</ul>
 								</NavigationMenuContent>
 							</NavigationMenuItem>
-							<NavigationMenuItem className="nav-item">
-								<Link href="/plans" passHref>
-									<NavigationMenuLink
-										className={navigationMenuTriggerStyle()}
-										active={pathname === "/plans"}>
-										Plans
+
+							{[
+								{ title: "Plans", href: "/plans" },
+								{ title: "Insights", href: "/insights" },
+								{ title: "About", href: "/about" },
+								{ title: "FAQ", href: "/faq" },
+								{ title: "Contact", href: "/contact" },
+							].map(({ title, href }) => (
+								<NavigationMenuItem key={href} className="nav-item">
+									<NavigationMenuLink asChild>
+										<Link
+											href={href}
+											className={cn(
+												navigationMenuTriggerStyle(),
+												pathname === href && "aria-current=page"
+											)}
+											aria-current={pathname === href ? "page" : undefined}>
+											{title}
+										</Link>
 									</NavigationMenuLink>
-								</Link>
-							</NavigationMenuItem>
-							<NavigationMenuItem className="nav-item">
-								<Link href="/insights" passHref>
-									<NavigationMenuLink
-										className={navigationMenuTriggerStyle()}
-										active={pathname === "/insights"}>
-										Insights
-									</NavigationMenuLink>
-								</Link>
-							</NavigationMenuItem>
-							<NavigationMenuItem className="nav-item">
-								<Link href="/about" passHref>
-									<NavigationMenuLink
-										className={navigationMenuTriggerStyle()}
-										active={pathname === "/about"}>
-										About
-									</NavigationMenuLink>
-								</Link>
-							</NavigationMenuItem>
-							<NavigationMenuItem className="nav-item">
-								<Link href="/faq" passHref>
-									<NavigationMenuLink
-										className={navigationMenuTriggerStyle()}
-										active={pathname === "/faq"}>
-										FAQ
-									</NavigationMenuLink>
-								</Link>
-							</NavigationMenuItem>
-							<NavigationMenuItem className="nav-item">
-								<Link href="/contact" passHref>
-									<NavigationMenuLink
-										className={navigationMenuTriggerStyle()}
-										active={pathname === "/contact"}>
-										Contact
-									</NavigationMenuLink>
-								</Link>
-							</NavigationMenuItem>
+								</NavigationMenuItem>
+							))}
 						</NavigationMenuList>
 					</NavigationMenu>
 				</div>
+
 				<div className="flex items-center gap-2">
 					<ThemeToggle className="nav-item" />
 					<div className="hidden md:flex items-center gap-2">

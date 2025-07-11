@@ -197,7 +197,7 @@ export function Footer() {
 				</div>
 				<div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
 					<p>
-						© {new Date().getFullYear()} Merilledge Advisors Management Limited.
+						© {new Date().getFullYear()} Merilledge Advisory Management Limited.
 						All rights reserved.
 					</p>
 				</div>

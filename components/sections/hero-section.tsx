@@ -52,7 +52,7 @@ export function HeroSection() {
 							<span className="text-primary">Invest Without Limits.</span>
 						</h1>
 						<p className="hero-animate-item opacity-0 text-xl text-muted-foreground md:text-2xl">
-							At Merilledge Advisors Management, we don’t just help you invest,
+							At Merilledge Advisory Management, we don’t just help you invest,
 							we empower you to grow wealth with confidence. From beginner
 							strategies to elite investment bundles, our expert-backed tools,
 							real-time insights, and premium advisory services are built to

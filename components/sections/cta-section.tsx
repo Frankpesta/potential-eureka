@@ -45,7 +45,7 @@ export function CtaSection() {
 				</h2>
 				<p className="cta-animate opacity-0 text-xl max-w-3xl mx-auto mb-8">
 					Join thousands of investors who have already transformed their
-					financial future with Merilledge Advisors Management Limited. Start
+					financial future with Merilledge Advisory Management Limited. Start
 					building wealth today.
 				</p>
 				<div className="cta-animate opacity-0 flex flex-col sm:flex-row justify-center gap-4">

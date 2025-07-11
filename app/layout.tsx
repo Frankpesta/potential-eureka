@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
 	title:
-		"Merilledge Advisors Management Limited | Smart, Secure & Profitable Investment Solutions",
+		"Merilledge Advisory  Management Limited | Smart, Secure & Profitable Investment Solutions",
 	description:
 		"Unlock your financial future with Merilledge Advisors Management — expert-managed crypto, hedge funds, real estate, retirement, and kids' investment plans tailored for smart growth.",
 };
